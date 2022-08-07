@@ -7,13 +7,35 @@ main%}
   class="input-group-prepend"
   style="padding: 30px; font-size: large"
 >
-  <div class="gestImage">
-    <img src="https://gest.com.tr/templates/fontaine_j3/images/logo.png" />
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url('https://www.templatemonster.com/blog/tr/wp-content/uploads/2014/09/5-Blurred-Backgrounds.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
+  </head>
+</html>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" align="center">
+      <img src="https://media-exp1.licdn.com/dms/image/C560BAQE-2ix6AZFhzQ/company-logo_200_200/0/1646769891038?e=2147483647&v=beta&t=OSKcfJZ-ezue17O2N-qkX7WnCXLMtmD2afbslYUSTTs
+      " class="mw-100" width="350" height="200">
+    </div>
+    <div class="carousel-item" align="center">
+      <img src="https://e-mektep.com/webfiles/fotograf/referans/11-avd-danismanlik-20210818-004042-emektep_referans_140x140.JPG" 
+      class="mw-100" width="350" height="200">
+    </div>
   </div>
-  <div class="permissionTitle">
-    <h1 style="color: #00b5ad">İzin Formu</h1>
+  <br />
+</div>
+  <div class="col order-5">
+    <h1 style="color:darkred">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERSONEL İZİN FORMU</h1>
   </div>
-  <div class="form-group">
+  <div class="col-5">
     <label for="firstname">İsim Giriniz</label>
     <input
       name="firstname"
@@ -24,7 +46,7 @@ main%}
     />
   </div>
 
-  <div class="form-group">
+  <div class="col-5">
     <label for="tcidentityno">TC Kimlik No</label>
     <input
       name="tcidentityno"
@@ -34,7 +56,7 @@ main%}
       placeholder="TC..."
     />
   </div>
-  <div class="form-group">
+  <div class="col-5">
     <label for="email">E-Mail</label>
     <input
       name="email"
@@ -44,7 +66,7 @@ main%}
       placeholder="E-Mail..."
     />
   </div>
-  <div class="form-group">
+  <div class="col-5">
     <label for="department">Çalıştığı Bölüm</label>
     <input
       name="department"
@@ -54,14 +76,20 @@ main%}
       placeholder="Bölüm..."
     />
   </div>
-  <div class="form-group">
+  <div class="col-5">
     <label for="permissiontype">İzin Türü</label>
     <select class="form-control" id="permissiontype" name="permissiontype">
       <option selected>İzin Türü Seçiniz</option>
       <option>YILLIK ÜCRETLİ İZİN</option>
       <option>DOĞUM İZNİ</option>
+      <option>ÜCRETSİZ İZİN</option>
+      <option>1.DERECE YAKIN CENAZE İZNİ</option>
       <option>EVLENME İZNİ</option>
+      <option>ANALIK İZNİ</option>
       <option>BABALIK İZNİ</option>
+      <option>İDARİ İZİN</option>
+      <option>HASTALIK İZNİ</option>
+      <option>MESAİ KARŞILIĞI İZİN</option>
       <option>ENGELLİ VEYA HASTA ÇOCUK TEDAVİSİ İZNİ</option>
       <option>PERİYODİK KONTROL İZNİ</option>
       <option>SÜT İZNİ</option>
@@ -71,7 +99,7 @@ main%}
       <option>1/2 GÜN DOĞUM İZNİ</option>
     </select>
   </div>
-  <div class="form-group">
+  <div class="col-5">
     <label for="permissionstart">İzin Başlangıç</label>
     <input
       name="permissionstart"
@@ -81,7 +109,7 @@ main%}
       placeholder="Başlangıç..."
     />
   </div>
-  <div class="form-group">
+  <div class="col-5">
     <label for="permissionfinished">İzin Bitiş</label>
     <input
       name="permissionfinished"
@@ -91,7 +119,7 @@ main%}
       placeholder="Bitiş..."
     />
   </div>
-  <div class="form-group">
+  <div class="col-5">
     <label for="startingwork">İşe Başlama</label>
     <input
       name="startingwork"
@@ -101,7 +129,7 @@ main%}
       placeholder="İşe Başlama..."
     />
   </div>
-  <div class="form-group">
+  <div class="col-5">
     <label for="permissionperiod">İzin Süresi</label>
     <select class="form-control" id="permissionperiod" name="permissionperiod">
       <option selected>İzin Süresi Seçiniz</option>
@@ -115,8 +143,28 @@ main%}
       <option>120</option>
       <option>180</option>
     </select>
+  </div>
+  <div class="col-5">
+    <label for="permissionstart">İzin Talep Tarihi</label>
+    <input
+      name="permissionstart"
+      type="date"
+      class="form-control"
+      id="permissionstart"
+      placeholder="Başlangıç..."
+    />
+  </div>
+  <div class="col-5">
+    <label for="permissionstart">Yönetici Onay Tarihi</label>
+    <input
+      name="permissionstart"
+      type="date"
+      class="form-control"
+      id="permissionstart"
+      placeholder="Başlangıç..."
+    />
     <br />
   </div>
-  <button type="submit" class="btn btn-primary">Gönder</button>
+  <button type="submit" class="btn btn-info">Gönder</button>
 </form>
 {% endblock %}
