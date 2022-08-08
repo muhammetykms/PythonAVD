@@ -1,67 +1,96 @@
 {% extends "base.html" %} {% block title %} Anasayfa {%endblock%} {% block
 main%}
 
-<form
-  action=""
-  method="POST"
-  class="input-group-prepend"
-  style="padding: 30px; font-size: large"
->
-  <div class="gestImage">
-    <img src="https://gest.com.tr/templates/fontaine_j3/images/logo.png" />
+<form action="" method="POST" class="input-group-prepend" style="padding: 30px; font-size: large">
+  <div class="col order-5">
+    <h1 style="text-align:center; color:black">&nbsp;PERSONEL İZİN FORMU</h1>
   </div>
-  <div class="permissionTitle">
-    <h1 style="color: #00b5ad">İzin Formu</h1>
-  </div>
-  <div class="form-group">
-    <label for="firstname">İsim Giriniz</label>
-    <input
-      name="firstname"
-      type="text"
-      class="form-control"
-      id="firstname"
-      placeholder="İsim..."
-    />
-  </div>
+  <br />
+  <br />
+  <html>
+    <link rel="stylesheet" href="style.css">
+  <head>
+    <style>
+      body {
+        background-image: url('https://netresim.com/service/Download.php?resim=3140');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
 
-  <div class="form-group">
+      .brand-name {
+        display: flex;
+        justify-content: center;
+      }
+
+      .brand-checkbox {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+      }
+      .sendButton{
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  </html>
+  </head>
+  <div class="text-center brand-name">
+    <div class="brand-checkbox">
+      <div>
+        <img
+          src="https://media-exp1.licdn.com/dms/image/C560BAQE-2ix6AZFhzQ/company-logo_200_200/0/1646769891038?e=2147483647&v=beta&t=OSKcfJZ-ezue17O2N-qkX7WnCXLMtmD2afbslYUSTTs"
+          class="rounded" width="320" height="200" />
+      </div>
+
+      <div>
+        <input type="checkbox" class="checkbox" id="check1" />
+      </div>
+    </div>
+    <div class="brand-checkbox">
+      <div>
+        <img
+          src="https://e-mektep.com/webfiles/fotograf/referans/11-avd-danismanlik-20210818-004042-emektep_referans_140x140.JPG"
+          class="rounded" width="325" height="200" />
+      </div>
+      <div>
+        <input type="checkbox" class="checkbox" id="check2" />
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+  </div>
+  <div class="container col-6">
+    <label for="firstname">İsim Giriniz</label>
+    <input name="firstname" type="text" class="form-control" id="firstname" placeholder="İsim..." />
+  </div>
+  <div class="container col-6">
     <label for="tcidentityno">TC Kimlik No</label>
-    <input
-      name="tcidentityno"
-      type="text"
-      class="form-control"
-      id="tcidentityno"
-      placeholder="TC..."
-    />
+    <input name="tcidentityno" type="text" class="form-control" id="tcidentityno" placeholder="TC..." />
   </div>
-  <div class="form-group">
+  <div class="container col-6">
     <label for="email">E-Mail</label>
-    <input
-      name="email"
-      type="email"
-      class="form-control"
-      id="email"
-      placeholder="E-Mail..."
-    />
+    <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail..." />
   </div>
-  <div class="form-group">
+  <div class="container col-6">
     <label for="department">Çalıştığı Bölüm</label>
-    <input
-      name="department"
-      type="text"
-      class="form-control"
-      id="departmant"
-      placeholder="Bölüm..."
-    />
+    <input name="department" type="text" class="form-control" id="departmant" placeholder="Bölüm..." />
   </div>
-  <div class="form-group">
+  <div class="container col-6">
     <label for="permissiontype">İzin Türü</label>
     <select class="form-control" id="permissiontype" name="permissiontype">
       <option selected>İzin Türü Seçiniz</option>
       <option>YILLIK ÜCRETLİ İZİN</option>
       <option>DOĞUM İZNİ</option>
+      <option>ÜCRETSİZ İZİN</option>
+      <option>1.DERECE YAKIN CENAZE İZNİ</option>
       <option>EVLENME İZNİ</option>
+      <option>ANALIK İZNİ</option>
       <option>BABALIK İZNİ</option>
+      <option>İDARİ İZİN</option>
+      <option>HASTALIK İZNİ</option>
+      <option>MESAİ KARŞILIĞI İZİN</option>
       <option>ENGELLİ VEYA HASTA ÇOCUK TEDAVİSİ İZNİ</option>
       <option>PERİYODİK KONTROL İZNİ</option>
       <option>SÜT İZNİ</option>
@@ -71,37 +100,19 @@ main%}
       <option>1/2 GÜN DOĞUM İZNİ</option>
     </select>
   </div>
-  <div class="form-group">
+  <div class="container col-6">
     <label for="permissionstart">İzin Başlangıç</label>
-    <input
-      name="permissionstart"
-      type="date"
-      class="form-control"
-      id="permissionstart"
-      placeholder="Başlangıç..."
-    />
+    <input name="permissionstart" type="date" class="form-control" id="permissionstart" placeholder="Başlangıç..." />
   </div>
-  <div class="form-group">
+  <div class="container col-6">
     <label for="permissionfinished">İzin Bitiş</label>
-    <input
-      name="permissionfinished"
-      type="date"
-      class="form-control"
-      id="permissionfinished"
-      placeholder="Bitiş..."
-    />
+    <input name="permissionfinished" type="date" class="form-control" id="permissionfinished" placeholder="Bitiş..." />
   </div>
-  <div class="form-group">
+  <div class="container col-6">
     <label for="startingwork">İşe Başlama</label>
-    <input
-      name="startingwork"
-      type="text"
-      class="form-control"
-      id="startingwork"
-      placeholder="İşe Başlama..."
-    />
+    <input name="startingwork" type="text" class="form-control" id="startingwork" placeholder="İşe Başlama..." />
   </div>
-  <div class="form-group">
+  <div class="container col-6">
     <label for="permissionperiod">İzin Süresi</label>
     <select class="form-control" id="permissionperiod" name="permissionperiod">
       <option selected>İzin Süresi Seçiniz</option>
@@ -115,8 +126,10 @@ main%}
       <option>120</option>
       <option>180</option>
     </select>
-    <br />
   </div>
-  <button type="submit" class="btn btn-primary">Gönder</button>
+  <div class="text-center sendButton">
+    <buttons type="submit" class="btn btn-secondary">Gönder</buttons>
+  </div>
 </form>
+
 {% endblock %}
