@@ -17,3 +17,11 @@ body {
 h1 .title {
   font-size: 100px;
 }
+brand-name {
+  display: flex;
+  justify-content: center;
+}
+brand-checkbox {
+  display: flex;
+  flex-direction: column;
+}

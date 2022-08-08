@@ -1,82 +1,83 @@
 {% extends "base.html" %} {% block title %} Anasayfa {%endblock%} {% block
 main%}
 
-<form
-  action=""
-  method="POST"
-  class="input-group-prepend"
-  style="padding: 30px; font-size: large"
->
-<html>
+<form action="" method="POST" class="input-group-prepend" style="padding: 30px; font-size: large">
+  <div class="col order-5">
+    <h1 style="text-align:center; color:black">&nbsp;PERSONEL İZİN FORMU</h1>
+  </div>
+  <br />
+  <br />
+  <html>
+    <link rel="stylesheet" href="style.css">
   <head>
     <style>
       body {
-        background-image: url('https://www.templatemonster.com/blog/tr/wp-content/uploads/2014/09/5-Blurred-Backgrounds.jpg');
+        background-image: url('https://netresim.com/service/Download.php?resim=3140');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
       }
+
+      .brand-name {
+        display: flex;
+        justify-content: center;
+      }
+
+      .brand-checkbox {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+      }
+      .sendButton{
+        margin-top: 10px;
+      }
     </style>
   </head>
-</html>
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" align="center">
-      <img src="https://media-exp1.licdn.com/dms/image/C560BAQE-2ix6AZFhzQ/company-logo_200_200/0/1646769891038?e=2147483647&v=beta&t=OSKcfJZ-ezue17O2N-qkX7WnCXLMtmD2afbslYUSTTs
-      " class="mw-100" width="350" height="200">
-    </div>
-    <div class="carousel-item" align="center">
-      <img src="https://e-mektep.com/webfiles/fotograf/referans/11-avd-danismanlik-20210818-004042-emektep_referans_140x140.JPG" 
-      class="mw-100" width="350" height="200">
-    </div>
-  </div>
-  <br />
-</div>
-  <div class="col order-5">
-    <h1 style="color:darkred">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERSONEL İZİN FORMU</h1>
-  </div>
-  <div class="col-5">
-    <label for="firstname">İsim Giriniz</label>
-    <input
-      name="firstname"
-      type="text"
-      class="form-control"
-      id="firstname"
-      placeholder="İsim..."
-    />
-  </div>
 
-  <div class="col-5">
+  </html>
+  </head>
+  <div class="text-center brand-name">
+    <div class="brand-checkbox">
+      <div>
+        <img
+          src="https://media-exp1.licdn.com/dms/image/C560BAQE-2ix6AZFhzQ/company-logo_200_200/0/1646769891038?e=2147483647&v=beta&t=OSKcfJZ-ezue17O2N-qkX7WnCXLMtmD2afbslYUSTTs"
+          class="rounded" width="320" height="200" />
+      </div>
+
+      <div>
+        <input type="checkbox" class="checkbox" id="check1" />
+      </div>
+    </div>
+    <div class="brand-checkbox">
+      <div>
+        <img
+          src="https://e-mektep.com/webfiles/fotograf/referans/11-avd-danismanlik-20210818-004042-emektep_referans_140x140.JPG"
+          class="rounded" width="325" height="200" />
+      </div>
+      <div>
+        <input type="checkbox" class="checkbox" id="check2" />
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+  </div>
+  <div class="container col-6">
+    <label for="firstname">İsim Giriniz</label>
+    <input name="firstname" type="text" class="form-control" id="firstname" placeholder="İsim..." />
+  </div>
+  <div class="container col-6">
     <label for="tcidentityno">TC Kimlik No</label>
-    <input
-      name="tcidentityno"
-      type="text"
-      class="form-control"
-      id="tcidentityno"
-      placeholder="TC..."
-    />
+    <input name="tcidentityno" type="text" class="form-control" id="tcidentityno" placeholder="TC..." />
   </div>
-  <div class="col-5">
+  <div class="container col-6">
     <label for="email">E-Mail</label>
-    <input
-      name="email"
-      type="email"
-      class="form-control"
-      id="email"
-      placeholder="E-Mail..."
-    />
+    <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail..." />
   </div>
-  <div class="col-5">
+  <div class="container col-6">
     <label for="department">Çalıştığı Bölüm</label>
-    <input
-      name="department"
-      type="text"
-      class="form-control"
-      id="departmant"
-      placeholder="Bölüm..."
-    />
+    <input name="department" type="text" class="form-control" id="departmant" placeholder="Bölüm..." />
   </div>
-  <div class="col-5">
+  <div class="container col-6">
     <label for="permissiontype">İzin Türü</label>
     <select class="form-control" id="permissiontype" name="permissiontype">
       <option selected>İzin Türü Seçiniz</option>
@@ -99,37 +100,19 @@ main%}
       <option>1/2 GÜN DOĞUM İZNİ</option>
     </select>
   </div>
-  <div class="col-5">
+  <div class="container col-6">
     <label for="permissionstart">İzin Başlangıç</label>
-    <input
-      name="permissionstart"
-      type="date"
-      class="form-control"
-      id="permissionstart"
-      placeholder="Başlangıç..."
-    />
+    <input name="permissionstart" type="date" class="form-control" id="permissionstart" placeholder="Başlangıç..." />
   </div>
-  <div class="col-5">
+  <div class="container col-6">
     <label for="permissionfinished">İzin Bitiş</label>
-    <input
-      name="permissionfinished"
-      type="date"
-      class="form-control"
-      id="permissionfinished"
-      placeholder="Bitiş..."
-    />
+    <input name="permissionfinished" type="date" class="form-control" id="permissionfinished" placeholder="Bitiş..." />
   </div>
-  <div class="col-5">
+  <div class="container col-6">
     <label for="startingwork">İşe Başlama</label>
-    <input
-      name="startingwork"
-      type="text"
-      class="form-control"
-      id="startingwork"
-      placeholder="İşe Başlama..."
-    />
+    <input name="startingwork" type="text" class="form-control" id="startingwork" placeholder="İşe Başlama..." />
   </div>
-  <div class="col-5">
+  <div class="container col-6">
     <label for="permissionperiod">İzin Süresi</label>
     <select class="form-control" id="permissionperiod" name="permissionperiod">
       <option selected>İzin Süresi Seçiniz</option>
@@ -144,27 +127,9 @@ main%}
       <option>180</option>
     </select>
   </div>
-  <div class="col-5">
-    <label for="permissionstart">İzin Talep Tarihi</label>
-    <input
-      name="permissionstart"
-      type="date"
-      class="form-control"
-      id="permissionstart"
-      placeholder="Başlangıç..."
-    />
+  <div class="text-center sendButton">
+    <buttons type="submit" class="btn btn-secondary">Gönder</buttons>
   </div>
-  <div class="col-5">
-    <label for="permissionstart">Yönetici Onay Tarihi</label>
-    <input
-      name="permissionstart"
-      type="date"
-      class="form-control"
-      id="permissionstart"
-      placeholder="Başlangıç..."
-    />
-    <br />
-  </div>
-  <button type="submit" class="btn btn-info">Gönder</button>
 </form>
+
 {% endblock %}
