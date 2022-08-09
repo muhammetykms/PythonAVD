@@ -1,6 +1,7 @@
 from ast import arguments
 from email import message
 from os import sendfile
+from turtle import onclick
 from unicodedata import name
 from flask import Flask, request, render_template , make_response
 import numpy as np
@@ -33,8 +34,12 @@ def upload():
     permissionfinished = request.form["permissionfinished"]
     startingwork = request.form["startingwork"]
     permissionperiod = request.form["permissionperiod"]
+    radioButton = request.form["radio"]
+
+    
     #Atama Yaptığımız değişkenleri burada bir dictionary haline getiriyoruz.
     dictionary = {
+    'Firma Adı' :[radioButton],
     'Adı':[firstname],
     'TC No':[tcidentityno],
     'Email':[email],

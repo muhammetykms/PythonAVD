@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
@@ -24,4 +25,60 @@ brand-name {
 brand-checkbox {
   display: flex;
   flex-direction: column;
+}
+
+.body {
+  background-image: url("https://netresim.com/service/Download.php?resim=3140");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.brand-name {
+  display: flex;
+  justify-content: center;
+}
+
+.brand-checkbox {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  margin-left: 18%;
+  padding: 10px;
+}
+.sendButton {
+  margin-top: 30px;
+  border-radius: 5%;
+}
+@media screen and (max-width: 770px) {
+  .textbox-view {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .imgView {
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.view {
+  display: flex;
+  flex-wrap: wrap;
+}
+.radioButton {
+  margin-left: 23%;
+  margin-top: 5px;
+}
+.title {
+  text-align: center;
+  color: black;
+  margin-left: 13%;
+  margin-top: 3%;
 }

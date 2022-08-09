@@ -1,134 +1,263 @@
 {% extends "base.html" %} {% block title %} Anasayfa {%endblock%} {% block
 main%}
-
-<form action="" method="POST" class="input-group-prepend" style="padding: 30px; font-size: large">
+<link rel="stylesheet" href="style.css" />
+<form
+  action=""
+  method="POST"
+  class="input-group-prepend"
+  style="padding: 30px; font-size: large"
+>
   <div class="col order-5">
-    <h1 style="text-align:center; color:black">&nbsp;PERSONEL İZİN FORMU</h1>
+    <h1 class="title">&nbsp;PERSONEL İZİN FORMU</h1>
   </div>
   <br />
   <br />
   <html>
-    <link rel="stylesheet" href="style.css">
-  <head>
-    <style>
-      body {
-        background-image: url('https://netresim.com/service/Download.php?resim=3140');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-      }
+    <head>
+      <style>
+        body {
+          background-image: url("https://netresim.com/service/Download.php?resim=3140");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
 
-      .brand-name {
-        display: flex;
-        justify-content: center;
-      }
+        .brand-name {
+          display: flex;
+          justify-content: center;
+        }
 
-      .brand-checkbox {
-        display: flex;
-        flex-direction: column;
-        margin: 0 10px;
-      }
-      .sendButton{
-        margin-top: 10px;
-      }
-    </style>
-  </head>
-
+        .brand-checkbox {
+          display: flex;
+          flex-direction: column;
+          margin: 0 10px;
+          margin-left: 18%;
+          padding: 10px;
+        }
+        .sendButton {
+          margin-top: 30px;
+          border-radius: 5%;
+        }
+        @media screen and (max-width: 770px) {
+          .textbox-view {
+            flex-basis: 100%;
+            margin-bottom: 30px;
+          }
+        }
+        @media (max-width: 700px) {
+          .row {
+            flex-direction: column;
+          }
+        }
+        @media only screen and (max-width: 1024px) {
+          .imgView {
+            margin-bottom: 2%;
+            display: flex;
+            flex-direction: row;
+          }
+        }
+        .view {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .radioButton {
+          margin-left: 23%;
+          margin-top: 5px;
+        }
+        .title {
+          text-align: center;
+          color: black;
+          margin-left: 13%;
+          margin-top: 3%;
+        }
+      </style>
+    </head>
   </html>
-  </head>
-  <div class="text-center brand-name">
-    <div class="brand-checkbox">
-      <div>
-        <img
-          src="https://media-exp1.licdn.com/dms/image/C560BAQE-2ix6AZFhzQ/company-logo_200_200/0/1646769891038?e=2147483647&v=beta&t=OSKcfJZ-ezue17O2N-qkX7WnCXLMtmD2afbslYUSTTs"
-          class="rounded" width="320" height="200" />
+
+  <div class="view">
+    <div style="margin-bottom: 2%">
+      <div class="brand-checkbox">
+        <div class="imgStyle">
+          <img
+            src="https://media-exp1.licdn.com/dms/image/C560BAQE-2ix6AZFhzQ/company-logo_200_200/0/1646769891038?e=2147483647&v=beta&t=OSKcfJZ-ezue17O2N-qkX7WnCXLMtmD2afbslYUSTTs"
+            class="rounded"
+            width="320"
+            height="200"
+          />
+        </div>
+
+        <div class="text-center radioButton">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="radio"
+            value="GEST"
+          />
+        </div>
+      </div>
+      <div class="brand-checkbox">
+        <div class="imgStyle">
+          <img
+            src="https://e-mektep.com/webfiles/fotograf/referans/11-avd-danismanlik-20210818-004042-emektep_referans_140x140.JPG"
+            class="rounded"
+            width="325"
+            height="200"
+          />
+        </div>
+        <div class="text-center radioButton">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="radio"
+            value="AVD"
+          />
+        </div>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="container col-6" style="margin-top: 40px">
+      <div class="row">
+        <div class="col">
+          <label for="firstname">İsim Giriniz</label>
+          <input
+            name="firstname"
+            type="text"
+            class="form-control"
+            id="firstname"
+            placeholder="İsim..."
+          />
+        </div>
+        <div class="col">
+          <label for="firstname">Soyisim Giriniz</label>
+          <input
+            name="lastname"
+            type="text"
+            class="form-control"
+            id="lastname"
+            placeholder="Soyisim..."
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="tcidentityno">TC Kimlik No</label>
+          <input
+            name="tcidentityno"
+            type="text"
+            class="form-control"
+            id="tcidentityno"
+            placeholder="TC..."
+          />
+        </div>
+        <div class="col">
+          <label for="email">E-Mail</label>
+          <input
+            name="email"
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="E-Mail..."
+          />
+        </div>
       </div>
 
-      <div>
-        <input type="checkbox" class="checkbox" id="check1" />
+      <div class="row">
+        <div class="col">
+          <label for="department">Çalıştığı Bölüm</label>
+          <input
+            name="department"
+            type="text"
+            class="form-control"
+            id="departmant"
+            placeholder="Bölüm..."
+          />
+        </div>
+        <div class="col">
+          <label for="permissiontype">İzin Türü</label>
+          <select
+            class="form-control"
+            id="permissiontype"
+            name="permissiontype"
+          >
+            <option selected>İzin Türü Seçiniz</option>
+            <option>YILLIK ÜCRETLİ İZİN</option>
+            <option>DOĞUM İZNİ</option>
+            <option>ÜCRETSİZ İZİN</option>
+            <option>1.DERECE YAKIN CENAZE İZNİ</option>
+            <option>EVLENME İZNİ</option>
+            <option>ANALIK İZNİ</option>
+            <option>BABALIK İZNİ</option>
+            <option>İDARİ İZİN</option>
+            <option>HASTALIK İZNİ</option>
+            <option>MESAİ KARŞILIĞI İZİN</option>
+            <option>ENGELLİ VEYA HASTA ÇOCUK TEDAVİSİ İZNİ</option>
+            <option>PERİYODİK KONTROL İZNİ</option>
+            <option>SÜT İZNİ</option>
+            <option>EVLAT EDİNME İZNİ</option>
+            <option>YENİ İŞ ARAMA İZNİ</option>
+            <option>MAZERET İZNİ</option>
+            <option>1/2 GÜN DOĞUM İZNİ</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <div class="brand-checkbox">
-      <div>
-        <img
-          src="https://e-mektep.com/webfiles/fotograf/referans/11-avd-danismanlik-20210818-004042-emektep_referans_140x140.JPG"
-          class="rounded" width="325" height="200" />
-      </div>
-      <div>
-        <input type="checkbox" class="checkbox" id="check2" />
-      </div>
-    </div>
-    &nbsp;&nbsp;&nbsp;&nbsp;
 
-  </div>
-  <div class="container col-6">
-    <label for="firstname">İsim Giriniz</label>
-    <input name="firstname" type="text" class="form-control" id="firstname" placeholder="İsim..." />
-  </div>
-  <div class="container col-6">
-    <label for="tcidentityno">TC Kimlik No</label>
-    <input name="tcidentityno" type="text" class="form-control" id="tcidentityno" placeholder="TC..." />
-  </div>
-  <div class="container col-6">
-    <label for="email">E-Mail</label>
-    <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail..." />
-  </div>
-  <div class="container col-6">
-    <label for="department">Çalıştığı Bölüm</label>
-    <input name="department" type="text" class="form-control" id="departmant" placeholder="Bölüm..." />
-  </div>
-  <div class="container col-6">
-    <label for="permissiontype">İzin Türü</label>
-    <select class="form-control" id="permissiontype" name="permissiontype">
-      <option selected>İzin Türü Seçiniz</option>
-      <option>YILLIK ÜCRETLİ İZİN</option>
-      <option>DOĞUM İZNİ</option>
-      <option>ÜCRETSİZ İZİN</option>
-      <option>1.DERECE YAKIN CENAZE İZNİ</option>
-      <option>EVLENME İZNİ</option>
-      <option>ANALIK İZNİ</option>
-      <option>BABALIK İZNİ</option>
-      <option>İDARİ İZİN</option>
-      <option>HASTALIK İZNİ</option>
-      <option>MESAİ KARŞILIĞI İZİN</option>
-      <option>ENGELLİ VEYA HASTA ÇOCUK TEDAVİSİ İZNİ</option>
-      <option>PERİYODİK KONTROL İZNİ</option>
-      <option>SÜT İZNİ</option>
-      <option>EVLAT EDİNME İZNİ</option>
-      <option>YENİ İŞ ARAMA İZNİ</option>
-      <option>MAZERET İZNİ</option>
-      <option>1/2 GÜN DOĞUM İZNİ</option>
-    </select>
-  </div>
-  <div class="container col-6">
-    <label for="permissionstart">İzin Başlangıç</label>
-    <input name="permissionstart" type="date" class="form-control" id="permissionstart" placeholder="Başlangıç..." />
-  </div>
-  <div class="container col-6">
-    <label for="permissionfinished">İzin Bitiş</label>
-    <input name="permissionfinished" type="date" class="form-control" id="permissionfinished" placeholder="Bitiş..." />
-  </div>
-  <div class="container col-6">
-    <label for="startingwork">İşe Başlama</label>
-    <input name="startingwork" type="text" class="form-control" id="startingwork" placeholder="İşe Başlama..." />
-  </div>
-  <div class="container col-6">
-    <label for="permissionperiod">İzin Süresi</label>
-    <select class="form-control" id="permissionperiod" name="permissionperiod">
-      <option selected>İzin Süresi Seçiniz</option>
-      <option>3</option>
-      <option>5</option>
-      <option>10</option>
-      <option>14</option>
-      <option>20</option>
-      <option>26+</option>
-      <option>60</option>
-      <option>120</option>
-      <option>180</option>
-    </select>
-  </div>
-  <div class="text-center sendButton">
-    <buttons type="submit" class="btn btn-secondary">Gönder</buttons>
+      <div class="row">
+        <div class="col">
+          <label for="permissionstart">İzin Başlangıç</label>
+          <input
+            name="permissionstart"
+            type="date"
+            class="form-control"
+            id="permissionstart"
+            placeholder="Başlangıç..."
+          />
+        </div>
+        <div class="col">
+          <label for="permissionfinished">İzin Bitiş</label>
+          <input
+            name="permissionfinished"
+            type="date"
+            class="form-control"
+            id="permissionfinished"
+            placeholder="Bitiş..."
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="permissionperiod">İzin Süresi</label>
+          <select
+            class="form-control"
+            id="permissionperiod"
+            name="permissionperiod"
+          >
+            <option selected>İzin Süresi Seçiniz</option>
+            <option>3</option>
+            <option>5</option>
+            <option>10</option>
+            <option>14</option>
+            <option>20</option>
+            <option>26+</option>
+            <option>60</option>
+            <option>120</option>
+            <option>180</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="startingwork">İşe Başlama</label>
+          <input
+            name="startingwork"
+            type="text"
+            class="form-control"
+            id="startingwork"
+            placeholder="İşe Başlama..."
+          />
+        </div>
+        <div class="text-center sendButton">
+          <input type="submit" class="d-grid gap-3 col-6 mx-auto" />
+        </div>
+      </div>
+    </div>
   </div>
 </form>
 
