@@ -26,6 +26,7 @@ def Definitions():
 def upload():
     #Formdaki verileri teker teker bir değişkene atadık.
     firstname= request.form["firstname"]
+    lastname = request.form["lastname"]
     tcidentityno= request.form["tcidentityno"]
     email= request.form["email"]
     department = request.form["department"]
@@ -35,12 +36,13 @@ def upload():
     startingwork = request.form["startingwork"]
     permissionperiod = request.form["permissionperiod"]
     radioButton = request.form["radio"]
-
+    
     
     #Atama Yaptığımız değişkenleri burada bir dictionary haline getiriyoruz.
     dictionary = {
     'Firma Adı' :[radioButton],
     'Adı':[firstname],
+    'Soyadı':[lastname],
     'TC No':[tcidentityno],
     'Email':[email],
     'Çalıştığı Bölüm':[department],
