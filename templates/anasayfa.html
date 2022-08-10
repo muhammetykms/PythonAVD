@@ -118,23 +118,23 @@ main%}
     <div class="container col-6" style="margin-top: 40px">
       <div class="row">
         <div class="col">
-          <label for="firstname">İsim Giriniz</label>
+          <label for="username">Kullanıcı Adı</label>
           <input
-            name="firstname"
+            name="username"
             type="text"
             class="form-control"
-            id="firstname"
-            placeholder="İsim..."
+            id="username"
+            placeholder="Kullanıcı Adı.."
           />
         </div>
         <div class="col">
-          <label for="lastname">Soyisim Giriniz</label>
+          <label for="password">Şifre</label>
           <input
-            name="lastname"
+            name="password"
             type="text"
             class="form-control"
-            id="lastname"
-            placeholder="Soyisim..."
+            id="password"
+            placeholder="Şifre..."
           />
         </div>
       </div>
@@ -226,28 +226,18 @@ main%}
       <div class="row">
         <div class="col">
           <label for="permissionperiod">İzin Süresi</label>
-          <select
+          <input
+            type="number"
             class="form-control"
             id="permissionperiod"
             name="permissionperiod"
-          >
-            <option selected>İzin Süresi Seçiniz</option>
-            <option>3</option>
-            <option>5</option>
-            <option>10</option>
-            <option>14</option>
-            <option>20</option>
-            <option>26+</option>
-            <option>60</option>
-            <option>120</option>
-            <option>180</option>
-          </select>
+          />
         </div>
         <div class="col">
           <label for="startingwork">İşe Başlama</label>
           <input
             name="startingwork"
-            type="text"
+            type="date"
             class="form-control"
             id="startingwork"
             placeholder="İşe Başlama..."
