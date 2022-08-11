@@ -44,4 +44,3 @@ def sendMail():
         print("Mail İşlemi Başarılı")
     except Exception as e:
             print("Hata Oluştu\n{0}".format(e))
-
