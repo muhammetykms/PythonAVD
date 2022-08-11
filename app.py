@@ -68,8 +68,6 @@ def upload():
                         if int(permissionperiod) > 0 and int(user['kalanIzinGunu']) > int(permissionperiod):
                             leftDays = int(user['kalanIzinGunu']) - int(permissionperiod)
                             user['kalanIzinGunu'] = str(leftDays)
-                            json.dump(user['kalanIzınGunu'],user,indent=4)
-                            user.truncate()
                             # Atama Yaptığımız değişkenleri burada bir dictionary haline getiriyoruz.
                             dictionary = {
                                 'Firma Adı': [radioButton],
